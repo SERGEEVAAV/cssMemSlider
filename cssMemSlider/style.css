@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+	
+}
+
+body {
+	background-color: #ddd;
+	overflow: hidden;
+}
+html {
+	overflow: hidden;
+}
+.slider {
+	width: 1100px;
+	height: 600px;
+	overflow: hidden;
+	border: 10px solid #fff;
+}
+
+.wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: black;
+	transform: translate(-50%, -50%);
+	font-size: 15px;
+	font-family: 'Verdana', Geneva, sans-serif;
+}
+.controls {
+	position: absolute;
+	bottom: 16px;
+	left: 870px;
+	transform: translateX(-50%);
+	display: flex;
+}
+
+.bar {
+	height: 12px;
+	width: 12px;
+	margin: 6px;
+	cursor: pointer;
+	background-color: black;
+	border: #4682B4 solid 2px;
+	opacity: 0.8;
+	border-radius: 50%;
+	transition: all .4s ease;
+}
+
+.bar:hover {
+	background-color: #4682B4;
+	opacity: 0.8;
+	transform: scale(1.1);
+}
+
+input[name="point"] {
+	position: absolute;
+	visibility: hidden;
+}
+
+.slides {
+	width: 400%;
+	height: 100%;
+	display: flex;
+}
+
+.slide {
+	width: 25%;
+	transition: all .6s ease;
+}
+
+.form-slide img {
+	width: 100%;
+	height: 100%;
+	/* object-fit: scale-down; */
+	
+}
+.form-slide {
+	width: 750px;
+	height: 350px;
+	margin: 120px 180px;
+	border: #ddd solid 10px;
+	/* border-radius: 10px; */
+}
+h2 {
+	color: #fff;
+	margin-top: 70px;
+	
+}
+#slide1:checked ~ .s1 {
+	margin-left: 0;
+}
+#slide2:checked ~ .s1 {
+	margin-left: -25%;
+}
+#slide3:checked ~ .s1 {
+	margin-left: -50%;
+}
+#slide4:checked ~ .s1 {
+	margin-left: -75%;
+}
+#slide5:checked ~ .s1 {
+	margin-left: -100%;
+}
+
+@media screen and (max-width: 768px) {
+	.controls {
+		left: 50%;
+	}
+	.slider {
+		width: 700px;
+		height: 600px;
+	}
+	.form-slide {
+		width: 680px;
+		/* height: 600px; */
+		margin: 120px auto;
+		border: #ddd solid 10px;
+		/* border-radius: 10px; */
+	}
+}	
+@media  (min-width: 320px) and (max-width: 460px) {
+	.controls {
+		left: 50%;
+	}
+	.form-slide {
+		width: 300px;
+		height: 150px;
+		margin: 150px  auto;
+	}
+
+	.form-slide img {
+		width: 100%;
+		height: 100%;
+		/* object-fit: contain; */
+		
+		
+	}
+	.slider {
+		width: 320px;
+		
+	}
+
+	h2 {
+		color: #fff;
+		margin-top:200px;
+	
+		
+	}
+	.controls {
+		
+		bottom: 100px;
+		
+	}
+}
